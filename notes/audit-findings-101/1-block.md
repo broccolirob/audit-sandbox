@@ -99,8 +99,7 @@ function getSellRate(
 
 Compound’s `enterMarket`/`exitMarket` functions return an error code instead of reverting in case of failure. DeFi Saver smart contracts never check for the error codes returned from Compound smart contracts.
 
-= [Major Severity Finding](https://consensys.net/diligence/audits/2021/03/defi-saver/#error-codes-of-compound-s-comptroller-entermarket-comptroller-exitmarket-are-not-checked)
-
+- [Major Severity Finding](https://consensys.net/diligence/audits/2021/03/defi-saver/#error-codes-of-compound-s-comptroller-entermarket-comptroller-exitmarket-are-not-checked)
 - Recommendation: Caller contract should revert in case the error code is not 0.
 - Resolution: Fixed by reverting in the case the return value is non zero.
 
