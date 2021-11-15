@@ -54,17 +54,49 @@ Static analysis is a technique of analyzing program properties without actually 
 
 ## Fuzzing
 
-Fuzz testing is an automated software testing technique that involves providing invalid, unexpected, or random data as inputs to a computer program. The program is then monitored for exceptions such as crashes, failing built-in code assertions, or potential memory leaks.
+[Fuzz testing](https://en.wikipedia.org/wiki/Fuzzing) is an automated software testing technique that involves providing invalid, unexpected, or random data as inputs to a computer program. The program is then monitored for exceptions such as crashes, failing built-in code assertions, or potential memory leaks.
 
 1. Fuzzing is especially relevant to smart contracts because anyone can interact with them on the blockchain with random inputs without necessarily having a valid reason or expectation (arbitrary byzantine behavior)
 2. [Echidna](https://github.com/crytic/echidna) and [Harvey](https://mariachris.github.io/Pubs/FSE-2020-Harvey.pdf) are two popular tools for smart contract fuzzing.
 
 ## Symbolic checking
 
+[Symbolic checking](https://en.wikipedia.org/wiki/Model_checking#Symbolic_model_checking) is a technique of checking for program correctness, i.e. proving/verifying, by using symbolic inputs to represent set of states and transitions instead of enumerating individual states/transitions separately.
+
+1. Model checking or property checking is a method for checking whether a finite-state model of a system meets a given specification (also known as correctness).
+2. In order to solve such a problem algorithmically, both the model of the system and its specification are formulated in some precise mathematical language. To this end, the problem is formulated as a task in logic, namely to check whether a structure satisfies a given logical formula.
+3. A simple model-checking problem consists of verifying whether a formula in the propositional logic is satisfied by a given structure.
+4. Instead of enumerating reachable states one at a time, the state space can sometimes be traversed more efficiently by considering large numbers of states at a single step. When such state space traversal is based on representations of a set of states and transition relations as logical formulas, binary decision diagrams (BDD) or other related data structures, the model-checking method is symbolic.
+5. Model-checking tools face a combinatorial blow up of the state-space, commonly known as the state explosion problem, that must be addressed to solve most real-world problems.
+6. Symbolic algorithms avoid explicitly constructing the graph for the finite state machines (FSM); instead, they represent the graph implicitly using a formula in quantified propositional logic.
+
 ## Formal verification
+
+[Formal verification](https://en.wikipedia.org/wiki/Formal_verification) is the act of proving or disproving the correctness of intended algorithms underlying a system with respect to a certain formal specification or property, using formal methods of mathematics.
+
+1. Formal verification is effective at detecting complex bugs which are hard to detect manually or using simpler automated tools.
+2. Formal verification needs a specification of the program being verified and techniques to translate/compare the specification with the actual implementation.
+3. [Certora’s](https://www.certora.com/) Prover and ChainSecurity’s VerX are examples of formal verification tools for smart contracts. KEVM from Runtime Verification Inc is a formal verification framework that models EVM semantics.
 
 ## Manual analysis
 
+Manual analysis is complimentary to automated analysis using tools and serves a critical need in smart contract audits.
+
+1. Automated analysis using tools is cheap (typically open-source free software), fast, deterministic and scalable (varies depending on the tool being semi-/fully-automated) but however is only as good as the properties it is made aware of, which is typically limited to Solidity and EVM related constraints.
+2. Manual analysis with humans, in contrast, is expensive, slow, non-deterministic and not scalable because human expertise in smart contact security is a rare/expensive skill set today and we are slower, prone to error and inconsistent.
+3. Manual analysis is however the only way today to infer and evaluate business logic and application-level constraints which is where a majority of the serious vulnerabilities are being found.
+
 ## False Positives
 
+False positives are findings which indicate the presence of vulnerabilities but which in fact are not vulnerabilities. Such false positives could be due to incorrect assumptions or simplifications in analysis which do not correctly consider all the factors required for the actual presence of vulnerabilities.
+
+1. False positives require further manual analysis on findings to investigate if they are indeed false or true positives.
+2. High number of false positives increases manual effort in verification and lowers the confidence in the accuracy of the earlier automated/manual analysis.
+3. True positives might sometimes be classified as false positives which leads to vulnerabilities being exploited instead of being fixed.
+
 ## False Negatives
+
+False negatives are missed findings that should have indicated the presence of vulnerabilities but which are in fact are not reported at all. Such false negatives could be due to incorrect assumptions or inaccuracies in analysis which do not correctly consider the minimum factors required for the actual presence of vulnerabilities.
+
+1. False negatives, per definition, are not reported or even realized unless a different analysis reveals their presence or the vulnerabilities are exploited.
+2. High number of false negatives lowers the confidence in the effectiveness of the earlier manual/automated analysis.
