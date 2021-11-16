@@ -198,3 +198,10 @@ The purpose of the `MetaSwap` contract is to save users gas costs when dealing w
 
 - [Medium Severity Finding](https://consensys.net/diligence/audits/2020/08/metaswap/#a-new-malicious-adapter-can-access-users-tokens)
 - Recommendation: Make MetaSwap contract the only contract that receives token approval. It then moves tokens to the `Spender` contract before that contract `DELEGATECALL`'s to the appropriate adapter. In this model, newly added adapters shouldn’t be able to access users’ funds.
+
+## Owner can front-run traders by updating adapters
+
+MetaSwap owners can front-run users to swap an adapter implementation. This could be used by a malicious or compromised owner to steal from users. Because adapters are `DELEGATECALL`’ed, they can modify storage. This means any adapter can overwrite the logic of another adapter, regardless of what policies are put in place at the contract level. Users must fully trust every adapter because just one malicious adapter could change the logic of all other adapters.
+
+- [Medium Severity Finding](https://consensys.net/diligence/audits/2020/08/metaswap/#owner-can-front-run-traders-by-updating-adapters)
+- Recommendation: At a minimum, disallow modification of existing adapters. Instead, simply add new adapters and disable the old ones. A new malicious adapter could still overwrite the adapter mapping to modify existing adapters. To fully address this issue, the adapter registry should be in a separate contract. 1) `MetaSwap` contains the adapter registry. It calls into a new `Spender` contract. 2) The `Spender` contract has no storage at all and is just used to `DELEGATECALL` to the adapter contracts.
