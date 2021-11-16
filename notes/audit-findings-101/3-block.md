@@ -207,7 +207,13 @@ function max(uint256 x, uint256 y) internal pure returns (uint256) {
 
 - [Major Severity Finding](https://consensys.net/diligence/audits/2020/01/the-lao/#whitelisted-tokens-limit)
 - Recommendation: A simple solution would be just limiting the number of whitelisted tokens. If the intention is to invest in many new tokens over time, and it’s not an option to limit the number of whitelisted tokens, it’s possible to add a function that removes tokens from the whitelist. For example, it’s possible to add a new type of proposal that is used to vote on token removal if the balance of this token is zero. Before voting for that, shareholders should sell all the balance of that token.
-- Resolution: Mitigated by having separate limits for number of whitelisted tokens (for non-zero balance and for zero balance). That’s helpful because it’s much cheaper to process tokens with zero balance in the guild bank and you can have much more whitelisted tokens overall. `solidity uint256 constant MAX_TOKEN_WHITELIST_COUNT = 400; // maximum number of whitelisted tokens uint256 constant MAX_TOKEN_GUILDBANK_COUNT = 200; // maximum number of tokens with non-zero balance in guildbank uint256 public totalGuildBankTokens = 0; // total tokens with non-zero balance in guild bank` It should be noted that this is an estimated limit based on the manual calculations and current OP code gas costs. DAO members should consider splitting the DAO into two if more than 100 tokens with non-zero balance are used in the DAO to be safe.
+- Resolution: Mitigated by having separate limits for number of whitelisted tokens (for non-zero balance and for zero balance). That’s helpful because it’s much cheaper to process tokens with zero balance in the guild bank and you can have much more whitelisted tokens overall.
+  ```solidity
+  uint256 constant MAX_TOKEN_WHITELIST_COUNT = 400; // maximum number of whitelisted tokens
+  uint256 constant MAX_TOKEN_GUILDBANK_COUNT = 200; // maximum number of tokens with non-zero balance in guildbank
+  uint256 public totalGuildBankTokens = 0; // total tokens with non-zero balance in guild bank
+  ```
+  It should be noted that this is an estimated limit based on the manual calculations and current OP code gas costs. DAO members should consider splitting the DAO into two if more than 100 tokens with non-zero balance are used in the DAO to be safe.
 
 ### Code examples
 
