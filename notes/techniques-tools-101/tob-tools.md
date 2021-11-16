@@ -16,7 +16,7 @@
 8. Correctly parses 99.9% of all public Solidity code.
 9. Average execution time of less than 1 second per contract.
 
-## Slither Detectors
+## Slither detectors
 
 Slither bugs and optimizations detection can run on a Truffle/Embark/Dapp/Etherlime/Hardhat application or on a single Solidity file:
 
@@ -26,7 +26,7 @@ Slither bugs and optimizations detection can run on a Truffle/Embark/Dapp/Etherl
 
 ## Slither printers
 
-Slither printers allow printing contract information with --print and following options (with contract-summary, human-summary, and inheritance-graph for quick review, and others such as call-graph, cfg, function-summary and vars-and-auth for in-depth review):
+Slither printers allow printing contract information with `--print` and following options (with contract-summary, human-summary, and inheritance-graph for quick review, and others such as call-graph, cfg, function-summary and vars-and-auth for in-depth review):
 
 1. call-graph: Export the call-graph of the contracts to a dot file.
 2. cfg: Export the CFG of each functions.
@@ -85,7 +85,7 @@ Slither contract flattening tool `slither-flat` produces a flattened version of 
 2. Supports circular dependency.
 3. Supports all the compilation platforms (Truffle, embark, hardhat, etherlime, ...).
 
-## Slither-format
+## Slither format
 
 Slither format tool `slither-format` generates automatically patches. The patches are compatible with git. Patches should be carefully reviewed before applying. Detectors supported with this tool are:
 
