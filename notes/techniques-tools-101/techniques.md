@@ -86,7 +86,7 @@ Manual analysis is complimentary to automated analysis using tools and serves a 
 2. Manual analysis with humans, in contrast, is expensive, slow, non-deterministic and not scalable because human expertise in smart contact security is a rare/expensive skill set today and we are slower, prone to error and inconsistent.
 3. Manual analysis is however the only way today to infer and evaluate business logic and application-level constraints which is where a majority of the serious vulnerabilities are being found.
 
-## False Positives
+## False positives
 
 False positives are findings which indicate the presence of vulnerabilities but which in fact are not vulnerabilities. Such false positives could be due to incorrect assumptions or simplifications in analysis which do not correctly consider all the factors required for the actual presence of vulnerabilities.
 
@@ -94,9 +94,17 @@ False positives are findings which indicate the presence of vulnerabilities but 
 2. High number of false positives increases manual effort in verification and lowers the confidence in the accuracy of the earlier automated/manual analysis.
 3. True positives might sometimes be classified as false positives which leads to vulnerabilities being exploited instead of being fixed.
 
-## False Negatives
+## False negatives
 
 False negatives are missed findings that should have indicated the presence of vulnerabilities but which are in fact are not reported at all. Such false negatives could be due to incorrect assumptions or inaccuracies in analysis which do not correctly consider the minimum factors required for the actual presence of vulnerabilities.
 
 1. False negatives, per definition, are not reported or even realized unless a different analysis reveals their presence or the vulnerabilities are exploited.
 2. High number of false negatives lowers the confidence in the effectiveness of the earlier manual/automated analysis.
+
+## Smart contract security tools
+
+Tools are critical in assisting smart contract developers and auditors with showcasing (potentially) exploitable vulnerabilities, highlighting dangerous programming styles or surfacing common patterns of misuse. None of these however replace the need for manual review/validation to evaluate contract-specific business logic and other complex control-flow, data-flow & value-flow aspects.
+
+## Security tool categories
+
+tools for testing, test coverage, linting, disassembling, visualization, static analysis, dynamic analysis and formal verification of smart contracts.

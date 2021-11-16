@@ -70,3 +70,7 @@ Audits are necessary (for now at least) but not sufficient:
 1. There is risk reduction but residual risk exists because of several factors such as limited amount of audit time/effort, limited insights into project specification/implementation, limited security expertise in the new and fast evolving technologies, limited audit scope, significant project complexity and limitations of automated/manual analysis.
 2. Not all audits are equal — it greatly depends on the expertise/experience of auditors, effort invested vis-a-vis project complexity/quality and tools/processes used.
 3. Audits provide a project’s security snapshot over a brief (typically few weeks) period. However, smart contracts need to evolve over time to add new features, fix bugs or optimize. Relying on external audits after every change is impractical.
+
+## Auditing Firms
+
+Audit Firms (representative; not exhaustive): ABDK, Arcadia, Beosin, Blockchain Consilium, BlockSec, CertiK, ChainSafe, ChainSecurity, Chainsulting, CoinFabrik, ConsenSys Diligence, Dedaub, G0, Hacken, Haechi, Halborn, HashEx, Iosiro, Least Authority, MixBytes, NCC, NewAlchemy, OpenZeppelin, PeckShield, Pessimistic, PepperSec, Pickle, Quantstamp, QuillHash, Runtime Verification, Sigma Prime, SlowMist, SmartDec, Solidified, Somish, Trail of Bits and Zokyo.

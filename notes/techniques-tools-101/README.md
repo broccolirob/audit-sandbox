@@ -3,3 +3,5 @@
 - [Auditing](./auditing.md)
 - [Reporting](./reporting.md)
 - [Techniques](./techniques.md)
+- [Trail of Bits Tools](./tob-tools.md)
+- [ConsenSys Tools](./consensys-tools.md)
