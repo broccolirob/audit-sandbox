@@ -14,6 +14,13 @@ ERC20 implementations are not always consistent. Some implementations of `transf
 IERC20(asset).transferFrom(receiverAddress, vars.aTokenAddress, vars.amountPlusPremium);
 ```
 
+### Notes references
+
+- [ERC20 `transfer` does not return boolean](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-101/money.md#erc20-transfer-does-not-return-boolean)
+- [ERC20 `transfer` and `transferFrom`](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/tokens-specific.md#erc20-transfer-and-transferfrom)
+- [Token handling](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/economic-functions.md#token-handling)
+- [Error reporting issues](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/issues.md#error-reporting-issues)
+
 ## Random task execution
 
 In a scenario where a user takes a flash loan, `_parseFLAndExecute()` gives the flash loan wrapper contract (`FLAaveV2`, `FLDyDx`) the permission to execute functions on behalf of the user’s `DSProxy`. This execution permission is revoked only after the entire recipe execution is finished, which means that in case that any of the external calls along the recipe execution is malicious, it might call `executeAction()` back, i.e. Reentrancy Attack, and inject any task it wishes (e.g. take user’s funds out, drain approved tokens, etc).
@@ -63,6 +70,12 @@ function executeOperation(
 }
 
 ```
+
+### Notes references
+
+- [Reentrancy vulnerabilities](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/1-block.md#random-task-execution)
+- [Controlled `delegatecall`](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-101/calls.md#controlled-delegatecall)
+- [Trust issues](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/issues.md#trust-issues)
 
 ## Tokens with more than 18 decimal points will cause issues
 
