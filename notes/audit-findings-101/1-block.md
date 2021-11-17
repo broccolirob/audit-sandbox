@@ -334,6 +334,10 @@ function commit(
 
 ```
 
+### Notes references
+
+- [Data processing issues](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/issues.md#data-processing-issues)
+
 ## Purchasing and committing still possible after launch
 
 Even after `GenesisGroup.launch` has successfully been executed, it is still possible to invoke `GenesisGroup.purchase` and `GenesisGroup.commit`.
@@ -349,3 +353,7 @@ modifier onlyGenesisPeriod() {
   // require(!isTimeEnded() && !core().hasGenesisGroupCompleted(), "GenesisGroup: Not in Genesis Period");
 }
 ```
+
+### Notes references
+
+- [Undefined behavior issues](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/issues.md#undefined-behavior-issues)
