@@ -242,6 +242,11 @@ function addLiquidity(LiquidityParams calldata lp, uint256 deadline)
 
 ```
 
+### Notes references
+
+- [Function parameters](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/1-block.md#token-approvals-can-be-stolen-in-daofiv1router01addliquidity)
+- [Access control issues](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/issues.md#access-control-issues)
+
 ## `swapExactTokensForETH` checks the wrong return value
 
 Instead of checking that the amount of tokens received from a swap is greater than the minimum amount expected from this swap (`sp.amountOut`), it calculates the difference between the initial receiver’s balance and the balance of the router.
