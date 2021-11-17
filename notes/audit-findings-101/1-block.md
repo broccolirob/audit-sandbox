@@ -356,4 +356,4 @@ modifier onlyGenesisPeriod() {
 
 ### Notes references
 
-- [Undefined behavior issues](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/issues.md#undefined-behavior-issues)
+- [Accounting issues](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/issues.md#accounting-issues)
