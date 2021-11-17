@@ -264,6 +264,11 @@ require(
 );
 ```
 
+### Notes references
+
+- [Function arguments](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/code-quality.md#function-arguments)
+- [Accounting issues](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/issues.md#accounting-issues)
+
 ## `DAOfiV1Pair.deposit()` accepts deposits of zero, blocking the pool
 
 `DAOfiV1Pair.deposit()` is used to deposit liquidity into the pool. Only a single deposit can be made, so no liquidity can ever be added to a pool where `deposited == true`. The `deposit()` function does not check for a nonzero deposit amount in either token, so a malicious user that does not hold any of the `baseToken` or `quoteToken` can lock the pool by calling `deposit()` without first transferring any funds to the pool.
@@ -298,6 +303,11 @@ function deposit(address to)
 }
 
 ```
+
+### Notes references
+
+- [Token handling](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/economic-functions.md#token-handling)
+- [Data validation issues](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/issues.md#data-validation-issues)
 
 ## `GenesisGroup.commit` overwrites previously-committed values
 
