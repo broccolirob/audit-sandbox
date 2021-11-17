@@ -108,6 +108,11 @@ function getSellRate(
 
 ```
 
+### Notes references
+
+- [Token handling](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/economic-functions.md#token-handling)
+- [Numerical issues](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/issues.md#numerical-issues)
+
 ## Error codes of Compound's `Comptroller.enterMarket`, `Comptroller.exitMarket` are not checked
 
 Compound’s `enterMarket`/`exitMarket` functions return an error code instead of reverting in case of failure. DeFi Saver smart contracts never check for the error codes returned from Compound smart contracts.
@@ -133,6 +138,11 @@ function exitMarket(address _cTokenAddr) public {
 }
 
 ```
+
+### Notes references
+
+- [Error-reporting issues](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/issues.md#error-reporting-issues)
+- [Function return values](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/code-quality.md#function-return-values)
 
 ## Reversed order of parameters in `allowance` function call
 
@@ -171,6 +181,10 @@ function pullTokens(
 }
 
 ```
+
+### Notes references
+
+- [Function arguments](https://github.com/broccolirob/security-sandbox/blob/master/notes/security-201/code-quality.md#function-arguments)
 
 ## Token approvals can be stolen in `DAOfiV1Router01.addLiquidity()`
 
