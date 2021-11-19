@@ -7,3 +7,4 @@
 - [ConsenSys Tools](./consensys-tools.md)
 - [Audit Process](./audit-process.md)
 - [Manual Review](./manual-review.md)
+- [Summation](./summation.md)
