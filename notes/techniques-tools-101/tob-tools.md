@@ -96,3 +96,33 @@ Slither format tool `slither-format` generates automatically patches. The patche
 5. external-function
 6. constable-states
 7. constant-function
+
+## Slither check ERC
+
+## Slither prop
+
+## Slither custom detectors
+
+## Manticore
+
+## Echidna
+
+## Echidna features
+
+## Echidna usage
+
+## Eth security toolbox
+
+## Ethersplay
+
+## Pyevmasm
+
+## Rattle
+
+## EVM cfg builder
+
+## Crytic compile
+
+## Solc select
+
+## Etheno
