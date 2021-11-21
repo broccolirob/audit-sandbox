@@ -13,7 +13,7 @@
 - [Auditing Overview](./tags/overview.md)
 - [Audit Reports](./tags/reports.md)
 - [Auditing Techniques](./tags/techniques.md)
-- [Reporting Mistakes](./tags/mistakes.md)
+- [Mistaken Reports](./tags/mistakes.md)
 - [Auditing Firms](./tags/firms.md)
 - [Security Tools](./tags/tools.md)
 - [Trail of Bits Tools](./tags/tob-tools.md)

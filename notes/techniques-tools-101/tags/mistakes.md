@@ -1,4 +1,4 @@
-# Reporting Mistakes
+# Mistaken Reports
 
 ## False positives
 
