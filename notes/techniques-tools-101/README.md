@@ -12,7 +12,7 @@
 
 - [Auditing Overview](./tags/overview.md)
 - [Audit Reports](./tags/reports.md)
-- [Audit Techniques](./tags/techniques.md)
+- [Auditing Techniques](./tags/techniques.md)
 - [Reporting Mistakes](./tags/mistakes.md)
 - [Auditing Firms](./tags/firms.md)
 - [Security Tools](./tags/tools.md)

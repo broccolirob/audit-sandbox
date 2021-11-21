@@ -1,6 +1,6 @@
-# Audit Techniques
+# Auditing Techniques
 
-## Audit Techniques
+## Audit techniques
 
 Techniques involve a combination of different methods that are applied to the project codebase with accompanying specification and documentation. Many are automated analyses performed with tools and some require manual assistance.
 

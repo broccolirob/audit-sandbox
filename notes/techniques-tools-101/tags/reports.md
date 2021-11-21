@@ -1,10 +1,10 @@
 # Audit Reports
 
-## Audit Reports
+## Audit reports
 
 Reports include details of the scope, goals, effort, timeline, approach, tools/techniques used, findings summary, vulnerability details, vulnerability classification, vulnerability severity/difficulty/likelihood, vulnerability exploit scenarios, vulnerability fixes and informational recommendations/suggestions on programming best-practices.
 
-## Audit Findings Classification
+## Findings classification
 
 The vulnerabilities found during the audit are typically classified into different categories which helps to understand the nature of the vulnerability, potential impact/severity, impacted project components/functionality and exploit scenarios. Trail of Bits, for example, uses the below classification:
 
@@ -22,7 +22,7 @@ The vulnerabilities found during the audit are typically classified into differe
 12. Timing: Related to race conditions, locking or order of operations.
 13. Undefined Behavior: Related to undefined behavior triggered by the program.
 
-## Audit Findings Likelihood/Difficulty
+## Findings likelihood/difficulty
 
 Per [OWASP](https://owasp.org/www-community/OWASP_Risk_Rating_Methodology), likelihood or difficulty is a rough measure of how likely or difficult this particular vulnerability is to be uncovered and exploited by an attacker. OWASP proposes three Likelihood levels of Low, Medium and High. Trail of Bits, for example, classifies every finding into four difficulty levels:
 
@@ -31,11 +31,11 @@ Per [OWASP](https://owasp.org/www-community/OWASP_Risk_Rating_Methodology), like
 3. Medium: Attackers must write an exploit, or need an in-depth knowledge of a complex system.
 4. High: The attacker must have privileged insider access to the system, may need to know extremely complex technical details or must discover other weaknesses in order to exploit this issue.
 
-## Audit Findings Impact
+## Findings impact
 
 Per OWASP, this estimates the magnitude of the technical and business impact on the system if the vulnerability were to be exploited. OWASP proposes three Impact levels of Low, Medium and High.
 
-## Audit Findings Severity
+## Findings severity
 
 Per OWASP, the Likelihood estimate and the Impact estimate are put together to calculate an overall Severity for this risk. This is done by figuring out whether the Likelihood is Low, Medium, or High and then do the same for impact.
 
