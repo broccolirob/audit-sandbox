@@ -1,4 +1,4 @@
-# The Audit Process
+# Auditor Process
 
 ## Process overview
 

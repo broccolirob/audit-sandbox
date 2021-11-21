@@ -1,4 +1,4 @@
-# Auditing Techniques
+# Audit Techniques
 
 ## Audit Techniques
 

@@ -1,6 +1,6 @@
 # Audit Techniques & Tools 101
 
-### Topic Checklist Items
+### Topic Checklists
 
 - [Block One: 1 - 20](./block-one.md)
 - [Block Two: 21 - 40](./block-two.md)
@@ -10,13 +10,15 @@
 
 ### Subtopic Tags
 
-- [Auditing](./tags/auditing.md)
-- [Reporting](./tags/reporting.md)
-- [Techniques](./tags/techniques.md)
-- [Resources](./tags/resources.md)
+- [Auditing Overview](./tags/overview.md)
+- [Audit Reports](./tags/reports.md)
+- [Audit Techniques](./tags/techniques.md)
+- [Reporting Mistakes](./tags/mistakes.md)
+- [Auditing Firms](./tags/firms.md)
+- [Security Tools](./tags/tools.md)
 - [Trail of Bits Tools](./tags/tob-tools.md)
 - [ConsenSys Tools](./tags/consensys-tools.md)
 - [Miscellaneous Tools](./tags/misc-tools.md)
-- [Audit Process](./tags/audit-process.md)
+- [Auditor Process](./tags/auditor-process.md)
 - [Manual Review](./tags/manual-review.md)
-- [Summation](./tags/summation.md)
+- [Auditor Reporting](./tags/auditor-reporting.md)

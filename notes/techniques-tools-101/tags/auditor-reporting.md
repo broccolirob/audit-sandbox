@@ -1,4 +1,4 @@
-# Summation
+# Auditor Reporting
 
 ## Presenting proof-of-concept exploits
 
@@ -17,7 +17,3 @@ Likelihood indicates the probability of a vulnerability being discovered by mali
 3. Many likelihood and impact evaluations are contentious and debatable between the audit and project teams, typically with security-conscious audit teams pressing for higher likelihood and impact and project teams downplaying the risks.
 
 Estimating the severity: Severity, per OWASP, is a combination of likelihood and impact. With reasonable evaluations of those two, severity estimates from the OWASP matrix should be straightforward.
-
-## Summary
-
-Audits are a time, resource and expertise bound effort where trained experts evaluate smart contracts using a combination of automated and manual techniques to find as many vulnerabilities as possible. Audits can show the presence of vulnerabilities but not their absence.
