@@ -1,6 +1,6 @@
 # Audit Techniques & Tools 101
 
-## Checklist
+### Topic Checklist Items
 
 - [Block One: 1 - 20](./block-one.md)
 - [Block Two: 21 - 40](./block-two.md)
@@ -8,7 +8,7 @@
 - [Block Four: 61 - 80](./block-four.md)
 - [Block Five: 81 - 101](./block-five.md)
 
-## Tags
+### Subtopic Tags
 
 - [Auditing](./tags/auditing.md)
 - [Reporting](./tags/reporting.md)
