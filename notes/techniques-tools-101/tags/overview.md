@@ -48,7 +48,7 @@ Effort typically involves more than one auditor simultaneously for getting indep
 
 ## Costs
 
-depends on the type/scope of audit but typically costs upwards of USD $10K/week depending on the complexity of the project, market demand/supply for audits and the strength/reputation of the auditing firm.
+Cost depends on the type/scope of audit but typically costs upwards of USD $10K/week depending on the complexity of the project, market demand/supply for audits and the strength/reputation of the auditing firm.
 
 ## Prerequisites
 
