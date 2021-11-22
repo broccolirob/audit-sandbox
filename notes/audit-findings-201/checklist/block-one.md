@@ -1,4 +1,4 @@
-# Block One #102 - 120
+# Block One: 102 - 120
 
 ## 102. Document potential edge cases for hook receiver contracts
 
