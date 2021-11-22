@@ -57,7 +57,7 @@ Running deeper automated tools such as fuzzers e.g. Echidna, symbolic checkers s
 
 ## Discussion with project team
 
-A hybrid approach might be interesting where the audit team initially brainstorms to discuss the project’s goals, specification/documentation and implementation but later firewall themselves to independently pursue the assessments and finally come together to compile their findings.
+Having an open communication channel with the project team is useful to clarify any assumptions in specification, documentation, implementation, or discuss interim findings.
 
 1. Findings may also be shared with the project team immediately on a private repository to discuss impact, fixes and other implications.
 2. If the audit spans multiple weeks, it may help to have a weekly sync up call. A counterpoint to this is to independently perform the entire assessment so as to not get biased by the project team’s inputs and opinions.
