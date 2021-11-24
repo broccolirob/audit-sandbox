@@ -49,3 +49,53 @@ Missing access controls in the `Timelock.executeTransaction` function allow `Pro
 ### Recommendation
 
 Short term, only allow the `admin` to call `Timelock.executeTransaction`. Long term, use property-based testing using Echidna to ensure the contract behaves as expected. Consider letting `Governor` inherit from `Timelock`. This would allow a lot of functions and code to be removed and significantly lower the complexity of these two contracts.
+
+## 36. Proposals could allow `Timelock.admin` takeover
+
+[High Risk - Origin Dollar](https://github.com/trailofbits/publications/blob/master/reviews/OriginDollar.pdf)
+
+The `Governor` contract contains special functions to let the `guardian` queue a transaction to change the `Timelock.admin`. However, a regular `Proposal` is also allowed to contain a transaction to change the `Timelock.admin`. This poses an unnecessary risk in that an attacker could create a `Proposal` to change the `Timelock.admin`.
+
+### Recommendation
+
+Short term, add a check that prevents `setPendingAdmin` to be included in a `Proposal`. Long term, consider letting `Governor` inherit from `Timelock`. This would allow a lot of functions and code to be removed and significantly lower the complexity of these two contracts.
+
+## 37. Reentrancy and untrusted contract call in `mintMultiple`
+
+[High Risk - Origin Dollar](https://github.com/trailofbits/publications/blob/master/reviews/OriginDollar.pdf)
+
+Missing checks and no reentrancy prevention allow untrusted contracts to be called from `mintMultiple`. This could be used by an attacker to drain the contracts.
+
+### Recommendation
+
+Short term, add checks that cause `mintMultiple` to revert if the amount is zero or the asset is not supported. Add a reentrancy guard to the `mint`, `mintMultiple`, `redeem`, and `redeemAll` functions. Long term, make use of Slither which will flag the reentrancy. Or even better, use Crytic and incorporate static analysis checks into your CI/CD pipeline. Add reentrancy guards to all non-view functions callable by anyone. Make sure to always revert a transaction if an input is incorrect. Disallow calling untrusted contracts.
+
+## 38. Lack of return value checks can lead to unexpected results
+
+[High Risk - Origin Dollar](https://github.com/trailofbits/publications/blob/master/reviews/OriginDollar.pdf)
+
+Several function calls do not check the return value. Without a return value check, the code is error-prone, which may lead to unexpected results.
+
+### Recommendation
+
+Short term, check the return value of all calls mentioned above. Long term, integrate static analysis into development process to catch these kinds of bugs.
+
+## 39. External calls in loop can lead to denial of service
+
+[High Risk - Origin Dollar](https://github.com/trailofbits/publications/blob/master/reviews/OriginDollar.pdf)
+
+Several function calls are made in unbounded loops. This pattern is error-prone as it can trap the contracts due to the gas limitations or failed transactions.
+
+### Recommendation
+
+Short term, review all the loops mentioned above and either: 1) allow iteration over part of the loop, or 2) remove elements. Long term, integrate static analysis into development process to catch these kinds of bugs.
+
+## 40. OUSD allows users to transfer more tokens than expected
+
+[High Risk - Origin Dollar](https://github.com/trailofbits/publications/blob/master/reviews/OriginDollar.pdf)
+
+Under certain circumstances, the OUSD contract allows users to transfer more tokens than the ones they have in their balance. This issue seems to be caused by a rounding issue when the creditsDeducted is calculated and subtracted.
+
+### Recommendation
+
+Short term, make sure the balance is correctly checked before performing all the arithmetic operations. This will make sure it does not allow to transfer more than expected. Long term, use Echidna to write properties that ensure ERC20 transfers are transferring the expected amount.
