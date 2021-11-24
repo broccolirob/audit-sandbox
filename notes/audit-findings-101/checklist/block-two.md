@@ -10,10 +10,6 @@ The `bailout` function allows anyone to transfer kicked user’s funds to the su
 
 By implementing pull pattern for token transfers, kicked member won’t be able to block the `ragekick` and the LAO members would be able to kick anyone much quicker. There is no need to keep the `bailout` function.
 
-### Resolution
-
-`bailout` no longer exists in the Pull Pattern update.
-
 ## 32. Sponsorship front-running
 
 [Major Severity - The LAO](https://consensys.net/diligence/audits/2020/01/the-lao/#sponsorship-front-running)
@@ -23,10 +19,6 @@ If proposal submission and sponsorship are done in 2 different transactions, it�
 ### Recommendation
 
 Pull pattern for token transfers will solve the issue. Front-running will still be possible but it doesn’t affect anything.
-
-### Resolution
-
-This issue no longer exists in the Pull Pattern update (with Major severity, anyway), as mentioned in the recommendation, the front-running vector is still open but no rationale exist for such a behavior.
 
 ## 33. Delegate assignment front-running
 
@@ -38,6 +30,22 @@ Any member can front-run another member’s `delegateKey` assignment. If you try
 
 Make it possible for a `delegateKey` to approve `delegateKey` assignment or cancel the current delegation. Commit-reveal methods can also be used to mitigate this attack.
 
-### Resolution
+## 34. Queued transactions cannot be canceled
 
-Team won't fix this issue.
+[High Risk - Origin Dollar](https://github.com/trailofbits/publications/blob/master/reviews/OriginDollar.pdf)
+
+The `Governor` contract contains special functions to set it as the admin of the `Timelock`. Only the `admin` can call `Timelock.cancelTransaction`. There are no functions in `Governor` that call `Timelock.cancelTransaction`. This makes it impossible for `Timelock.cancelTransaction` to ever be called.
+
+### Recommendation
+
+Short term, add a function to the `Governor` that calls `Timelock.cancelTransaction`. It is unclear who should be able to call it, and what other restrictions there should be around cancelling a transaction. Long term, consider letting `Governor` inherit from `Timelock`. This would allow a lot of functions and code to be removed and significantly lower the complexity of these two contracts.
+
+## 35. Proposal transactions can be executed separately and block `Proposal.execute` call
+
+[High Risk - Origin Dollar](https://github.com/trailofbits/publications/blob/master/reviews/OriginDollar.pdf)
+
+Missing access controls in the `Timelock.executeTransaction` function allow `Proposal` transactions to be executed separately, circumventing the `Governor.execute` function. This means that even though `Proposal.executed` field says `false`, some or all of the containing transactions might have already been executed.
+
+### Recommendation
+
+Short term, only allow the `admin` to call `Timelock.executeTransaction`. Long term, use property-based testing using Echidna to ensure the contract behaves as expected. Consider letting `Governor` inherit from `Timelock`. This would allow a lot of functions and code to be removed and significantly lower the complexity of these two contracts.
