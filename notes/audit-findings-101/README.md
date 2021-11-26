@@ -34,11 +34,31 @@
 ### Audited Protocols
 
 - [Aave Protocol V2](https://consensys.net/diligence/audits/2020/09/aave-protocol-v2/)
+  - 5.4 Unhandled return values of `transfer` and `transferFrom` - Medium
 - [DeFi Saver](https://consensys.net/diligence/audits/2021/03/defi-saver/)
+  - 5.1 Random task execution - Critical
+  - 5.2 Tokens with more than 18 decimal points will cause issues - Major
+  - 5.3 Error codes of Compound's `Comptroller.enterMarket`, `Comptroller.exitMarket` are not checked - Major
+  - 5.4 Reversed order of parameters in `allowance` function call - Medium
 - [DAOfi](https://consensys.net/diligence/audits/2021/02/daofi/)
+  - 4.1 Token approvals can be stolen in `DAOfiV1Router01.addLiquidity()` - Critical
+  - 4.4 The `swapExactTokensForETH` checks the wrong return value - Major
+  - 4.5 `DAOfiV1Pair.deposit()` accepts deposits of zero, blocking the pool - Medium
 - [Fei Protocol](https://consensys.net/diligence/audits/2021/01/fei-protocol/)
+  - 3.1 `GenesisGroup.commit` overwrites previously-committed values - Critical
+  - 3.2 Purchasing and committing still possible after launch - Critical
+  - 3.3 `UniswapIncentive` overflow on pre-transfer hooks - Major
+  - 3.4 `BondingCurve` allows users to acquire FEI before launch - Medium
+  - 3.5 `Timed.isTimeEnded` returns `true` if the timer has not been initialized - Medium
+  - 3.6 Overflow/underflow protection - Medium
+  - 3.7 Unchecked return value for `IWETH.transfer` call - Medium
+  - 3.8 `GenesisGroup.emergencyExit` remains functional after launch - Medium
 - [bitbank](https://consensys.net/diligence/audits/2020/11/bitbank/)
+  - 5.1 ERC20 tokens with no return value will fail to transfer - Major
 - [Metaswap](https://consensys.net/diligence/audits/2020/08/metaswap/)
+  - 4.1 Reentrancy vulnerability in `MetaSwap.swap()` - Major
+  - 4.2 A new malicious adapter can access users' tokens - Medium
+  - 4.3 Owner can front-run traders by updating adapters - Medium
 - [mStable 1.1](https://consensys.net/diligence/audits/2020/07/mstable-1.1/)
 - [Bancor V2 AMM](https://consensys.net/diligence/audits/2020/06/bancor-v2-amm-security-audit/)
 - [Shell Protocol](https://consensys.net/diligence/audits/2020/06/shell-protocol/)
