@@ -78,9 +78,30 @@
   - 5.7 Sponsorship front-running - Major
   - 5.8 Delegate assignment front-running - Medium
 - [Origin Dollar](https://github.com/trailofbits/publications/blob/master/reviews/OriginDollar.pdf)
+  - 6. Queued transactions cannot be canceled - High
+  - 8. Proposal transactions can be executed separately and block `Proposal.execute` call - High
+  - 9. Proposals could allow `Timelock.admin` takeover - High
+  - 10. Reentrancy and untrusted contract call in `mintMultiple` - High
+  - 19. Lack of return value checks can lead to unexpected results - High
+  - 20. External calls in loop can lead to denial of service - High
+  - 22. OUSD allows users to transfer more tokens than expected - High
+  - 23. OUSD total supply can be arbitrary, even smaller than user balances - High
 - [Yield Protocol](https://github.com/trailofbits/publications/blob/master/reviews/YieldProtocol.pdf)
+  - 1. Flash minting can be used to redeem `fyDAI` - Medium
+  - 4. Lack of `chainID` validation allows signatures to be re-used across forks - High
 - [Hermez](https://github.com/trailofbits/publications/blob/master/reviews/hermez.pdf)
+  - 1. Lack of a contract existence check allows token theft - High
+  - 2. No incentive for bidders to vote earlier - Medium
+  - 5. Lack of access control separation is risky - High
+  - 6. Lack of two-step procedure for critical operations leaves them error-prone - High
+  - 12. Initialization functions can be front-run - High
 - [Uniswap V3](https://github.com/Uniswap/v3-core/blob/main/audits/tob/audit.pdf)
+  - 1. Missing validation of `_owner` argument could indefinitely lock owner role - Medium
+  - 5. Incorrect comparison enables swapping and token draining at no cost - High
+  - 6. Unbound loop enables denial of service - Medium
+  - 7. Front-running pool's initialization can lead to draining of liquidity provider's initial deposits - Medium
+  - 8. Swapping on zero liquidity allows for control of the pool's price - Medium
+  - 9. Failed transfer may be overlooked due to lack of contract existence check - High
 - [DFX Finance](https://github.com/dfx-finance/protocol/blob/main/audits/2021-05-03-Trail_of_Bits.pdf)
 - [0x Protocol](https://github.com/trailofbits/publications/blob/master/reviews/0x-protocol.pdf)
 - [Synthetix EtherCollateral](https://github.com/sigp/public-audits/blob/master/synthetix/ethercollateral/review.pdf)
