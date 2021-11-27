@@ -103,22 +103,69 @@
   - 8 Swapping on zero liquidity allows for control of the pool's price - Medium
   - 9 Failed transfer may be overlooked due to lack of contract existence check - High
 - [DFX Finance](https://github.com/dfx-finance/protocol/blob/main/audits/2021-05-03-Trail_of_Bits.pdf)
+  - 1 Assimilators use a deprecated Chainlink API - Undetermined
+  - 10 Use of undefined behavior in equality check - High
+  - 12 Assimilators' balance functions return raw values - High
+  - 13 System always assumes USDC is equivalent to USD - Medium
 - [0x Protocol](https://github.com/trailofbits/publications/blob/master/reviews/0x-protocol.pdf)
+  - 2 Market makers have a reduced cost for performing front-running attacks - Medium
+  - 3 `cancelOrdersUpTo` can be used to permanently block future orders - High
+  - 4 `setSignatureValidatorApproval` race condition may be exploitable - Medium
+  - 6 Batch processing of transaction execution and order matching may lead to exchange griefing - Medium
+  - 7 Zero fee orders are possible if a user performs transactions with a zero gas price - Medium
+  - 13 Specification-Code mismatch for `AssetProxyOwner` timelock period - High
+  - 17 Unclear documentation on how order filling can fail - High
+  - 21 Calls to `setParams` may set invalid values and produce unexpected behavior in the staking contracts - Medium
 - [Synthetix EtherCollateral](https://github.com/sigp/public-audits/blob/master/synthetix/ethercollateral/review.pdf)
+  - 1 Improper supply cap limitation enforcement - High
+  - 2 Improper storage management of open loan accounts - High
+  - 3 Contract owner can arbitrarily change minting fees and interest rates - Medium
 - [InfiniGold](https://github.com/sigp/public-audits/blob/master/infinigold/review.pdf)
+  - 1 Inadequate proxy implementation preventing contract upgrades - Critical
+  - 2 Blacklisting bypass via `transferFrom()` function - High
 - [Synthetix Unipool](https://github.com/sigp/public-audits/blob/master/synthetix/unipool/review.pdf)
+  - 1 Wrong order of operations leads to exponentiation of `rewardPerTokenStored` - Critical
+  - 2 Staking before initial `notifyRewardAmount` can lead to disproportionate rewards - High
+  - 3 External call reverts if period has not elapsed - High
+  - 4 Gap between periods can lead to erroneous rewards - Medium
 - [Chainlink](https://github.com/sigp/public-audits/blob/master/chainlink-1/review.pdf)
+  - 2 Malicious users can DOS/Hijack requests from chainlinked contracts - High
 - [UMA Phase 4](https://blog.openzeppelin.com/uma-audit-phase-4/)
+  - M01 Lack of event emission after sensitive actions - Medium
+  - M02 Functions with unexpected side-effects - Medium
 - [1inch Liquidity Protocol](https://blog.openzeppelin.com/1inch-liquidity-protocol-audit/)
+  - M01 Mooniswap pairs cannot be unpaused - Medium
 - [Futureswap V2](https://blog.openzeppelin.com/futureswap-v2-audit/)
+  - H01 Attackers can prevent honest users from performing an instant withdraw from the Wallet contract - High
+  - M01 Not using upgrade safe contracts in `FsToken` inheritance - Medium
+  - M03 Unchecked output of the ECDSA `recover` function - Medium
 - [Notional Protocol](https://blog.openzeppelin.com/notional-audit/)
+  - M02 Adding new variables to multi-level inherited upgradeable contracts may break storage layout - Medium
 - [GEB Protocol](https://blog.openzeppelin.com/geb-protocol-audit/)
+  - M07 Unsafe division in `rdivide` and `wdivide` functions - Medium
 - [1inch Exchange Audit](https://blog.openzeppelin.com/1inch-exchange-audit/)
+  - M03 Incorrect `safeApprove` usage - Medium
 - [Opyn Gamma Protocol](https://blog.openzeppelin.com/opyn-gamma-protocol-audit/)
+  - H01 ETH could get trapped in the protocol - High
+  - M04 Use of transfer might render ETH impossible to withdraw - Medium
 - [Endaoment](https://blog.openzeppelin.com/endaoment-audit/)
+  - H02 Not following the Checks-Effects-Interactions pattern - High
 - [Audius](https://blog.openzeppelin.com/audius-contracts-audit/)
+  - H03 Updating the Governance registry and Guardian addresses emits no events - High
+  - H07 The quorum requirement can be trivially bypassed with sybil accounts - High
+  - M02 Inconsistently checking initialization - Medium
+  - M06 Voting period and quorum can be set to zero - Medium
+  - M10 Some state variables are not set during initialize - Medium
 - [Primitive](https://blog.openzeppelin.com/primitive-audit/)
+  - M08 Expired and/or paused options can still be traded - Medium
 - [ACO Protocol](https://blog.openzeppelin.com/aco-protocol-audit/)
+  - M01 `ERC20` transfers can misbehave - Medium
 - [Compound Open Price Feed](https://blog.openzeppelin.com/compound-open-price-feed-uniswap-integration-audit/)
+  - M04 Incorrect event emission - Medium
 - [MCDEX Mai Protocol](https://blog.openzeppelin.com/mcdex-mai-protocol-audit/)
+  - C01 Anyone can liquidate on behalf of another account - Critical
+  - C02 Orders cannot be cancelled - Critical
+  - M03 Reentrancy possibilities - Medium
+  - M06 Governance parameter changes should not be instant - Medium
 - [UMA Phase 1](https://blog.openzeppelin.com/uma-audit-phase-1/)
+  - H01 Votes can be duplicated - High
