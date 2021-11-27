@@ -78,14 +78,14 @@
   - 5.7 Sponsorship front-running - Major
   - 5.8 Delegate assignment front-running - Medium
 - [Origin Dollar](https://github.com/trailofbits/publications/blob/master/reviews/OriginDollar.pdf)
-  - 6. Queued transactions cannot be canceled - High
-  - 8. Proposal transactions can be executed separately and block `Proposal.execute` call - High
-  - 9. Proposals could allow `Timelock.admin` takeover - High
-  - 10. Reentrancy and untrusted contract call in `mintMultiple` - High
-  - 19. Lack of return value checks can lead to unexpected results - High
-  - 20. External calls in loop can lead to denial of service - High
-  - 22. OUSD allows users to transfer more tokens than expected - High
-  - 23. OUSD total supply can be arbitrary, even smaller than user balances - High
+  - 6 Queued transactions cannot be canceled - High
+  - 8 Proposal transactions can be executed separately and block `Proposal.execute` call - High
+  - 9 Proposals could allow `Timelock.admin` takeover - High
+  - 10 Reentrancy and untrusted contract call in `mintMultiple` - High
+  - 19 Lack of return value checks can lead to unexpected results - High
+  - 20 External calls in loop can lead to denial of service - High
+  - 22 OUSD allows users to transfer more tokens than expected - High
+  - 23 OUSD total supply can be arbitrary, even smaller than user balances - High
 - [Yield Protocol](https://github.com/trailofbits/publications/blob/master/reviews/YieldProtocol.pdf)
   - 1. Flash minting can be used to redeem `fyDAI` - Medium
   - 4. Lack of `chainID` validation allows signatures to be re-used across forks - High
