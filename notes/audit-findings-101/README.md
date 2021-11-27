@@ -60,10 +60,23 @@
   - 4.2 A new malicious adapter can access users' tokens - Medium
   - 4.3 Owner can front-run traders by updating adapters - Medium
 - [mStable 1.1](https://consensys.net/diligence/audits/2020/07/mstable-1.1/)
+  - 6.2 Users can collect interest from `SavingsContract` by only staking mTokens momentarily - Major
 - [Bancor V2 AMM](https://consensys.net/diligence/audits/2020/06/bancor-v2-amm-security-audit/)
+  - 5.1 Oracle updates can be manipulated to perform atomic front-running attack - Critical
 - [Shell Protocol](https://consensys.net/diligence/audits/2020/06/shell-protocol/)
+  - 6.2 Certain functions lack input validation routines - Major
+  - 6.3 Remove `Loihi` methods that can be used as backdoors by the administrator - Major
 - [Lien Protocol](https://consensys.net/diligence/audits/2020/05/lien-protocol/)
+  - 3.1 A reverting fallback function will lock up all payouts - Critical
 - [The LAO](https://consensys.net/diligence/audits/2020/01/the-lao/)
+  - 5.1 `safeRagequit` makes you lose funds - Critical
+  - 5.2 Creating proposal is not trustless - Critical
+  - 5.3 Emergency processing can be blocked - Critical
+  - 5.4 Token Overflow might result in system halt or loss of funds - Major
+  - 5.5 Whitelisted tokens limit - Major
+  - 5.6 Summoner can steal funds using `bailout` - Major
+  - 5.7 Sponsorship front-running - Major
+  - 5.8 Delegate assignment front-running - Medium
 - [Origin Dollar](https://github.com/trailofbits/publications/blob/master/reviews/OriginDollar.pdf)
 - [Yield Protocol](https://github.com/trailofbits/publications/blob/master/reviews/YieldProtocol.pdf)
 - [Hermez](https://github.com/trailofbits/publications/blob/master/reviews/hermez.pdf)
