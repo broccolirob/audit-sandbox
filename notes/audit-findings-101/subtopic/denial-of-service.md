@@ -1,3 +1,5 @@
 # Denial of Service
 
-## 39. External calls in loop can lead to denial of service
+## External calls in loop can lead to denial of service
+
+## Batch processing of transaction execution and order matching may lead to exchange griefing
