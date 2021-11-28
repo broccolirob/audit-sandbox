@@ -26,7 +26,7 @@ const {
 
 module.exports = {
   solidity: {
-    compilers: [{ version: "0.6.6" }],
+    compilers: [{ version: "0.5.3" }],
   },
   defaultNetwork: NETWORK,
   networks: {
@@ -163,6 +163,6 @@ module.exports = {
     timeout: 100000,
   },
   paths: {
-    sources: "./contracts/fei-protocol",
+    sources: "./contracts/moloch",
   },
 };
