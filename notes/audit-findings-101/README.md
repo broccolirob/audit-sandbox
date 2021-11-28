@@ -83,8 +83,8 @@
   - 5.7 Sponsorship front-running - Major
   - 5.8 Delegate assignment front-running - Medium
 - [Origin Dollar](https://github.com/trailofbits/publications/blob/master/reviews/OriginDollar.pdf)
-  - 6 Queued transactions cannot be canceled - High
-  - 8 Proposal transactions can be executed separately and block `Proposal.execute` call - High
+  - [6 Queued transactions cannot be canceled - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/access-controls.md#queued-transactions-cannot-be-cancelled)
+  - [8 Proposal transactions can be executed separately and block `Proposal.execute` call - High]()
   - 9 Proposals could allow `Timelock.admin` takeover - High
   - 10 Reentrancy and untrusted contract call in `mintMultiple` - High
   - 19 Lack of return value checks can lead to unexpected results - High
@@ -93,13 +93,13 @@
   - 23 OUSD total supply can be arbitrary, even smaller than user balances - High
 - [Yield Protocol](https://github.com/trailofbits/publications/blob/master/reviews/YieldProtocol.pdf)
   - 1 Flash minting can be used to redeem `fyDAI` - Medium
-  - 4 Lack of `chainID` validation allows signatures to be re-used across forks - High
+  - [4 Lack of `chainID` validation allows signatures to be re-used across forks - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/access-controls.md#lack-of-chainid-validation-allows-signatures-to-be-re-used-across-forks)
 - [Hermez](https://github.com/trailofbits/publications/blob/master/reviews/hermez.pdf)
   - 1 Lack of a contract existence check allows token theft - High
   - 2 No incentive for bidders to vote earlier - Medium
-  - 5 Lack of access control separation is risky - High
+  - [5 Lack of access control separation is risky - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/access-controls.md#lack-of-access-control-separation-is-risky)
   - 6 Lack of two-step procedure for critical operations leaves them error-prone - High
-  - 12 Initialization functions can be front-run - High
+  - [12 Initialization functions can be front-run - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/configuration.md#initialization-functions-can-be-front-run)
 - [Uniswap V3](https://github.com/Uniswap/v3-core/blob/main/audits/tob/audit.pdf)
   - 1 Missing validation of `_owner` argument could indefinitely lock owner role - Medium
   - 5 Incorrect comparison enables swapping and token draining at no cost - High
