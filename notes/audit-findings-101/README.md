@@ -85,42 +85,42 @@
 - [Origin Dollar](https://github.com/trailofbits/publications/blob/master/reviews/OriginDollar.pdf)
   - [6 Queued transactions cannot be canceled - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/access-controls.md#queued-transactions-cannot-be-cancelled)
   - [8 Proposal transactions can be executed separately and block `Proposal.execute` call - High]()
-  - 9 Proposals could allow `Timelock.admin` takeover - High
-  - 10 Reentrancy and untrusted contract call in `mintMultiple` - High
+  - [9 Proposals could allow `Timelock.admin` takeover - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#proposals-could-allow-timelockadmin-takeover)
+  - [10 Reentrancy and untrusted contract call in `mintMultiple` - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#reentrancy-and-untrusted-contract-call-in-mintmultiple)
   - 19 Lack of return value checks can lead to unexpected results - High
   - 20 External calls in loop can lead to denial of service - High
-  - 22 OUSD allows users to transfer more tokens than expected - High
-  - 23 OUSD total supply can be arbitrary, even smaller than user balances - High
+  - [22 OUSD allows users to transfer more tokens than expected - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#ousd-allows-users-to-transfer-more-tokens-than-expected)
+  - [23 OUSD total supply can be arbitrary, even smaller than user balances - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#ousd-total-supply-can-be-arbitrary-even-smaller-than-user-balances)
 - [Yield Protocol](https://github.com/trailofbits/publications/blob/master/reviews/YieldProtocol.pdf)
   - 1 Flash minting can be used to redeem `fyDAI` - Medium
   - [4 Lack of `chainID` validation allows signatures to be re-used across forks - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/access-controls.md#lack-of-chainid-validation-allows-signatures-to-be-re-used-across-forks)
 - [Hermez](https://github.com/trailofbits/publications/blob/master/reviews/hermez.pdf)
-  - 1 Lack of a contract existence check allows token theft - High
+  - [1 Lack of a contract existence check allows token theft - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#lack-of-a-contract-existence-check-allows-token-theft)
   - 2 No incentive for bidders to vote earlier - Medium
   - [5 Lack of access control separation is risky - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/access-controls.md#lack-of-access-control-separation-is-risky)
-  - 6 Lack of two-step procedure for critical operations leaves them error-prone - High
+  - [6 Lack of two-step procedure for critical operations leaves them error-prone - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#lack-of-two-step-procedure-for-critical-operations-leaves-them-error-prone)
   - [12 Initialization functions can be front-run - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/configuration.md#initialization-functions-can-be-front-run)
 - [Uniswap V3](https://github.com/Uniswap/v3-core/blob/main/audits/tob/audit.pdf)
-  - 1 Missing validation of `_owner` argument could indefinitely lock owner role - Medium
-  - 5 Incorrect comparison enables swapping and token draining at no cost - High
-  - 6 Unbound loop enables denial of service - Medium
-  - 7 Front-running pool's initialization can lead to draining of liquidity provider's initial deposits - Medium
-  - 8 Swapping on zero liquidity allows for control of the pool's price - Medium
-  - 9 Failed transfer may be overlooked due to lack of contract existence check - High
+  - [1 Missing validation of `_owner` argument could indefinitely lock owner role - Medium](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#missing-validation-of-_owner-argument-could-indefinitely-lock-owner-role)
+  - [5 Incorrect comparison enables swapping and token draining at no cost - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#incorrect-comparison-enables-swapping-and-token-draining-at-no-cost)
+  - [6 Unbound loop enables denial of service - Medium](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#unbound-loop-enables-denial-of-service)
+  - [7 Front-running pool's initialization can lead to draining of liquidity provider's initial deposits - Medium](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#front-running-pools-initialization-can-lead-to-draining-of-liquidity-providers-initial-deposits)
+  - [8 Swapping on zero liquidity allows for control of the pool's price - Medium](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#swapping-on-zero-liquidity-allows-for-control-of-the-pools-price)
+  - [9 Failed transfer may be overlooked due to lack of contract existence check - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#failed-transfer-may-be-overlooked-due-to-lack-of-contract-existence-check)
 - [DFX Finance](https://github.com/dfx-finance/protocol/blob/main/audits/2021-05-03-Trail_of_Bits.pdf)
   - 1 Assimilators use a deprecated Chainlink API - Undetermined
   - 10 Use of undefined behavior in equality check - High
-  - 12 Assimilators' balance functions return raw values - High
-  - 13 System always assumes USDC is equivalent to USD - Medium
+  - [12 Assimilators' balance functions return raw values - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#assimilators-balance-functions-return-raw-values)
+  - [13 System always assumes USDC is equivalent to USD - Medium](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#system-always-assumes-usdc-is-equivalent-to-usd)
 - [0x Protocol](https://github.com/trailofbits/publications/blob/master/reviews/0x-protocol.pdf)
   - 2 Market makers have a reduced cost for performing front-running attacks - Medium
-  - 3 `cancelOrdersUpTo` can be used to permanently block future orders - High
+  - [3 `cancelOrdersUpTo` can be used to permanently block future orders - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#cancelordersupto-can-be-used-to-permanently-block-future-orders)
   - 4 `setSignatureValidatorApproval` race condition may be exploitable - Medium
   - 6 Batch processing of transaction execution and order matching may lead to exchange griefing - Medium
-  - 7 Zero fee orders are possible if a user performs transactions with a zero gas price - Medium
+  - [7 Zero fee orders are possible if a user performs transactions with a zero gas price - Medium](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#zero-fee-orders-are-possible-if-a-user-performs-transactions-with-a-zero-gas-price)
   - 13 Specification-Code mismatch for `AssetProxyOwner` timelock period - High
-  - 17 Unclear documentation on how order filling can fail - High
-  - 21 Calls to `setParams` may set invalid values and produce unexpected behavior in the staking contracts - Medium
+  - [17 Unclear documentation on how order filling can fail - High](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#unclear-documentation-on-how-order-filling-can-fail)
+  - [21 Calls to `setParams` may set invalid values and produce unexpected behavior in the staking contracts - Medium](https://github.com/broccolirob/audit-sandbox/blob/master/notes/audit-findings-101/subtopic/data-validation.md#calls-to-setparams-may-set-invalid-values-and-produce-unexpected-behavior-in-the-staking-contracts)
 - [Synthetix EtherCollateral](https://github.com/sigp/public-audits/blob/master/synthetix/ethercollateral/review.pdf)
   - 1 Improper supply cap limitation enforcement - High
   - 2 Improper storage management of open loan accounts - High
